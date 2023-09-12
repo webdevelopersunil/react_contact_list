@@ -1,5 +1,6 @@
 import axios from "axios";
 
+//Get Request : Importing the Contacts from API
 export const getContacts = () => async dispatch => {
   const response = await axios.get(
     "https://jsonplaceholder.typicode.com/users"
@@ -9,7 +10,7 @@ export const getContacts = () => async dispatch => {
     payload: response.data
   });
 };
-
+// Get Request : the specific contact detail's on the basis of contact ID
 export const getContact = id => async dispatch => {
   const response = await axios.get(
     `https://jsonplaceholder.typicode.com/users/${id}`
@@ -20,6 +21,8 @@ export const getContact = id => async dispatch => {
   });
 };
 
+
+//DELETE Request : Deleting the contact with the ID
 export const deleteContact = id => async dispatch => {
   await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
   dispatch({
@@ -28,6 +31,8 @@ export const deleteContact = id => async dispatch => {
   });
 };
 
+
+// Post : Used to add the contact details
 export const addContact = contact => async dispatch => {
   const response = await axios.post(
     "https://jsonplaceholder.typicode.com/users/",
@@ -39,6 +44,8 @@ export const addContact = contact => async dispatch => {
   });
 };
 
+
+//  PUT Reques : For updating the user contact detail
 export const updateContact = contact => async dispatch => {
   const response = await axios.put(
     `https://jsonplaceholder.typicode.com/users/${contact.id}`,

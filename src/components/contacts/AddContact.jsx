@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import TextInputGroup from "../layout/TextInputGroup";
 import { addContact } from "../../actions/contactActions";
 
+
+// Add contact Form
 class AddContact extends Component {
   state = {
     name: "",

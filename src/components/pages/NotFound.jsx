@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function NotFound() {
+
+  // Incase if user request for the unknown
   return (
     <div>
       <h1 className="display-4">

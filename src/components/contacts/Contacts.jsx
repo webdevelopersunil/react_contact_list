@@ -8,6 +8,8 @@ class Contacts extends Component {
     this.props.getContacts();
   }
 
+  // For listing all the contacts in the API
+
   render() {
     return (
       <React.Fragment>

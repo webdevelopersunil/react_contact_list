@@ -42,6 +42,7 @@ class Contact extends Component {
             </Link>
           </h4>
         </div>
+        {/* Contact Info Section */}
         {this.state.showContactInfo ? (
           <div className="card-body">
             <ul className="list-group">
